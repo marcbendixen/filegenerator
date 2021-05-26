@@ -41,7 +41,9 @@ const questions = [
 ]
 
 inquirer.prompt(questions).then(answers => {
-  const names = answers['name'].split(',').map(element => element.trim())
-  names.forEach(name => writeFile(file))
-  console.log(answers)
+  answers.fileTypes.forEach(fileType => {
+    const templateFunction = templates[fileType]
+    const fileString = templateFunction(answers.name)
+    writeFile(answers.name, fileType, fileString)
+  })
 })
