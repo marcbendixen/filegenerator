@@ -1,6 +1,24 @@
 const writeFile = require('./writeFile')
 const inquirer = require('inquirer')
 
+const templates = {
+  component: name => `export default function ${name}() {
+    return <div>${name}</div>
+  }`,
+  spec: name => `import { render, screen } from '@testing-library/react'
+  import ${name} from './${name}'
+  describe('${name}', () => {
+    it('should render componente with ${name}', () => {
+      ...
+    })
+  }})`,
+  stories: name => `import ${name} from './${name}'
+  export default {
+    title: '${name}'
+    component: ${name}
+  }`,
+}
+
 const questions = [
   {
     type: 'input',
