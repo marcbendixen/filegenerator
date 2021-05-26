@@ -6,7 +6,15 @@ const rl = readline.createInterface({
   output: process.stdout,
 })
 
-rl.question('Which function and file would you like to create? ', answer => {
-  console.log(answer)
-  rl.close()
-})
+rl.question(
+  'Which function and file would you like to create? Please seperate by comma. ',
+  answer => {
+    const answerArr = answer.split(',')
+
+    answerArr.map(name => {
+      writeFile(name.trim())
+    })
+
+    rl.close()
+  }
+)
