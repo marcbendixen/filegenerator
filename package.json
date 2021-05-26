@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/marcbendixen/filegenerator/issues"
   },
-  "homepage": "https://github.com/marcbendixen/filegenerator#readme"
+  "homepage": "https://github.com/marcbendixen/filegenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.0"
+  }
 }
