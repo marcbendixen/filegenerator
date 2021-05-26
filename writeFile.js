@@ -5,7 +5,7 @@ function writeFile(name) {
     `./${name}.js`,
     `function ${name}() {
 
-  }`
+}`
   )
 }
 
