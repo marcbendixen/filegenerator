@@ -1,8 +1,9 @@
 {
   "name": "filegenerator",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Tool to generate files for components, spec and stories.",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,8 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/marcbendixen/filegenerator.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Marc Bendixen",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/marcbendixen/filegenerator/issues"
   },
